@@ -20,4 +20,7 @@ This project involves analyzing NHS workforce data using SQL to uncover trends, 
 - `ORDER BY` – Sort query results.
 - `LEFT()` – Extract year from a date string
 
-# Project Navigation
+# 🧭 Project Navigation
+- 📈 [Project_Questions_&_Analysis](Assets/final_project/project_analysis.md)
+  
+- 📁  [Dataset](Assets/Dataset/nhsworkforcedata.xls)

@@ -25,6 +25,7 @@ WHERE YEAR(Time) = 2009
 GROUP BY Staff_Group;
 ```
 
+![](../screenshots/Task_number_2.png)
 ### 3. Task: Calculate the percentage of NHS Infrastructure Support staff relative to total staff for each time period.
 
 ```
@@ -39,6 +40,9 @@ FROM [Workforce].[dbo].[nhs-workforce-data-june-2022]
 GROUP BY Time
 ORDER BY Time;
 ```
+![](../screenshots/Task_number_3.png)
+
+
 ### 4. Task: Select records where the Ethnicity is not "All."
 
 ```
@@ -47,6 +51,8 @@ FROM [Workforce].[dbo].[nhs-workforce-data-june-2022]
 WHERE Ethnicity != 'All'
 ORDER BY Time;
 ```
+![](../screenshots/Task_number_4.png)
+
 ### 5: Task: Get a summary of total staff in each Role_Group for the most recent time period available (e.g., June 2022).
 
 ```
@@ -55,6 +61,12 @@ FROM   [Workforce].[dbo].[nhs-workforce-data-june-2022]
 WHERE YEAR(Time) = 2022 AND MONTH(Time) = 6
 GROUP BY Role_Group;
 ```
+![](../screenshots/Task_number_5.png)
+
+In June 2022, the NHS workforce was predominantly composed of staff in direct patient care and support roles. The largest group was Nurses & Health Visitors, with over 2.1 million staff, followed closely by Support to Doctors, Nurses & Midwives, which included nearly 1.9 million individuals. Scientific, Therapeutic & Technical Staff and Ambulance Staff were also significant, comprising over 1 million and 1.1 million staff respectively. HCHS Doctors accounted for approximately 797,000 employees.
+
+Beyond clinical roles, substantial numbers were employed in operational and support areas such as Central Functions (680,000), Hotel, Property & Estates (442,000), and Support to ST&T Staff (502,000), highlighting the broad infrastructure supporting healthcare delivery. Leadership roles included around 145,000 Managers and 77,000 Senior Managers. Smaller groups included Midwives (156,000) and an Unknown category with fewer than 3,000 staff. Overall, the data reflects the NHS's reliance not just on medical professionals, but on a diverse and expansive workforce that enables the system to function at scale.
+
 ### 6. Task: Write a query to find the Grade with the highest number of staff for each Staff_Group.
 
 ```
@@ -69,6 +81,8 @@ GROUP BY
 ORDER BY 
     Staff_Group;
 ```
+![](../screenshots/Task_number_6.png)
+
 ### 7. Task: Get the total number of NHS staff for each year.
 
 ```
@@ -82,4 +96,17 @@ GROUP BY
 ORDER BY 
     Year;
 ```
+![](../screenshots/Task_number_7.png)
+
+### 8. Task: Find the trend of staff in the Ambulance Staff role over time.
+
+```
+SELECT Time, SUM(Value) AS total_staff
+FROM  [Workforce].[dbo].[nhs-workforce-data-june-2022]
+WHERE Role_Group = 'Ambulance Staff'
+GROUP BY Time
+ORDER BY Time;
+```
+![](../screenshots/Task_number_8.png)
+
 

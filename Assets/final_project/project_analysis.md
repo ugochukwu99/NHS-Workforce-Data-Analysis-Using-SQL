@@ -16,6 +16,7 @@ where Role_Group = 'Ambulance Staff';
 
 ![](../screenshots/Task_number_1.png)
 
+The data shows the workforce composition of Ambulance Staff within NHS.
 
 ### 2. Task: Write a query to find the total number of staff in each Staff_Group for the year 2009.
 ```
@@ -24,8 +25,9 @@ FROM [Workforce].[dbo].[nhs-workforce-data-june-2022]
 WHERE YEAR(Time) = 2009
 GROUP BY Staff_Group;
 ```
-
 ![](../screenshots/Task_number_2.png)
+
+The data reflects the total NHS staff across different groups in 2009, highlighting significant variations in staffing levels. Professionally Qualified Clinical Staff had the highest count at 3,527,521, indicating a substantial presence in this category. NHS Infrastructure Support followed with 1,274,581 staff, while Support to Clinical Staff totaled 2,023,869. In contrast, Other Staff or Those with Unknown Classification had the lowest count at 28,875. Overall, the data suggests a significant concentration of staff within the Professionally Qualified Clinical Staff category.
 ### 3. Task: Calculate the percentage of NHS Infrastructure Support staff relative to total staff for each time period.
 
 ```
